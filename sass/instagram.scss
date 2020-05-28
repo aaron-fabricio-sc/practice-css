@@ -1,0 +1,436 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+}
+
+.contenedor_padre{
+   
+    width: 100%;
+    margin: auto;
+}
+header{
+    padding: 7px;
+    box-sizing: border-box;
+     width: 100%;
+     height: 70px;
+     box-shadow: 2px 0px 2px black;
+     
+     nav{
+    
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+       .contenedo_logo{
+           width: 100px;
+           height: 60px;
+           background: red;
+
+           img{
+               display: block;
+               width: 100%;
+               height: 100%;
+               background: white;
+           }
+       } 
+       .input{
+
+        form input{
+            border: mone;
+            outline: none;
+            border-radius: 3px;
+            padding: 8px;
+            box-shadow: 0 0 1px black;
+        }
+        ::placeholder{
+
+            text-align: center;
+        }
+       }
+
+       .icons{
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+    
+           color: gray;
+           width: 200px;
+          
+           box-sizing: border-box;
+
+           a{
+            color: grey;
+            i{  
+                font-size: 20px;
+                     
+                }
+           }
+       
+            
+           .logo_user{
+               width: 35px;
+               height: 35px;
+            
+               
+                
+
+               img{
+                 
+                   width: 100%;
+                   height: 100%;
+                   border-radius: 50%;
+               }
+           }
+       }
+     }
+}
+
+
+
+
+
+
+
+
+.container_descripcion{
+
+    width: 80%;
+    margin: auto;
+    height: 200px;
+    border-bottom: rgba(0,0,0,0.3) solid 1px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) ;
+    grid-template-rows:  repeat(3, 1fr) ;
+
+
+    .img{
+  
+      
+        grid-row: 1 / -1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      img{
+            border-radius: 50%;
+          width: 140px;
+          height: 140px;
+         
+      }
+    }
+    .datos_nombre{
+
+        grid-column: 2 / spam 1;
+
+        .nombre{
+            display: grid;
+            grid-template-columns: 300px 100px 1fr;
+            grid-template-rows: 1fr;
+          
+            align-items: end;
+            height: 100%;
+            
+            p{
+                font-size: 24px;
+               
+               
+            }
+            button{
+                background: transparent;
+                padding: 3px;
+                font-size: 14px;
+                border-radius: 3px;
+                border: none;
+                box-shadow: 0 0 2px black;
+                cursor: pointer;
+            }
+             i{
+                 padding-left: 10px;
+                font-size: 19px;
+             }
+
+        }
+    }
+    .datos_seguidores{
+        grid-column: 2 / spam 1;
+
+        .datos{
+            display: grid;
+            grid-template-columns: 170px 170px 1fr;
+            grid-row: 1fr;
+            height: 100%;
+            align-items: center;
+
+            div{
+                display: flex;
+                span{
+                    font-weight: bold;
+                    margin-right: 5px;
+                }
+                a{
+                    display: flex;
+                    color: black;
+                    text-decoration: none;
+                    span{
+                        font-weight: bold;
+                        margin-right: 5px;
+                    }
+                }
+                
+            }
+        }
+
+    }
+
+    .description{
+
+        grid-column: 2 / spam 1;
+        .datos_decription{
+
+            display: grid;
+         
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, 1fr);;
+            .name{
+               font-weight: bold;
+            }
+            .carrer{
+                height: 100%;
+                align-self: start;
+            }
+        }
+    }
+
+
+
+}
+.contenedor_botones{
+
+    width: 80%;
+    height: 50px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    button{
+        width: 200px;
+        border: none;
+        background: transparent;
+        font-weight: bold;
+        outline: none;
+        opacity: 0.5;
+
+        
+    }
+    button:focus{
+        opacity: 1;
+        border-top: black solid 1px;
+    }
+}
+
+   .contenedor{
+       
+    
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,minmax(100px, 293px));
+
+    justify-content: center;
+    grid-gap: 28px;
+    overflow: hidden;
+
+        .contenedor_image{
+          
+            display: block;
+            position: relative;
+
+            figure{
+                 
+                height: 100%;
+               
+                margin: 0;
+       
+         
+        
+            }
+            figure img{
+                height: 100%;
+                display: block;
+                object-fit: cover;
+                width: 100%;
+     
+            
+            
+            }
+        .efecto{
+                display: none;
+            background: rgba(0,0,0,0.5);
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            top: 0;
+            right: 0;
+                
+            justify-content: center;
+            align-items: center;
+            color: white;
+            
+            .likes, .commets{
+                font-size:18px;
+                display: inline-block;
+                margin: 10px;
+                font-weight: bold;
+            }
+        } 
+        
+        
+        }
+        .contenedor_image:hover .efecto {
+            display: flex;
+        }
+
+
+
+   }
+ 
+@media screen and (max-width: 768px){
+    .input{
+
+        form input{
+         display: none;
+        }
+        
+       }
+
+    .container_descripcion{
+        grid-template-columns:  repeat(4, 1fr) ;
+        grid-template-rows:  repeat(4, 1fr) ;
+        width: 100%;
+        .img{
+      
+  
+            grid-row: 1 / span 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          img{
+                border-radius: 50%;
+              width: 90px;
+              height: 90px;
+             
+          }
+        }
+        .datos_nombre{
+            
+            grid-row: 1 / span 2;
+          padding: 8px;
+            
+        
+    
+            .nombre{
+                display: grid;
+                grid-template-columns: 320px 1fr;
+                grid-template-rows: 1fr;
+              
+            
+        
+                align-items: center;
+              
+                p{
+                   
+                    font-size: 27px;
+                  
+                   
+                }
+                button{ 
+                    grid-row: 2 / span 1;
+                    grid-column:1 / -1;
+                   width: 90%;
+                    display: block;
+                  
+                    padding: 8px;
+                   
+                }
+                 i{
+                
+                     justify-items: start;
+                     grid-column: 2 / span 1;
+                     padding-left: 10px;
+                    font-size: 14px;
+                 }
+    
+            }
+        }
+        .datos_seguidores{
+            grid-column: 1 / -1;
+            grid-row: 4 / 5;
+            
+         
+            .datos{
+                border-top: rgba(0, 0, 0, 0.158) solid 1px;
+                display: grid;
+                grid-template-columns: 170px 170px 1fr;
+                grid-row: 1fr;
+                height: 100%;
+          
+                justify-items: center;
+    
+                div{
+                    display: flex;
+                    span{
+                        font-weight: bold;
+                        margin-right: 5px;
+                    }
+                    a{
+                        display: flex;
+                        color: black;
+                        text-decoration: none;
+                        span{
+                            font-weight: bold;
+                            margin-right: 5px;
+                        }
+                    }
+                    
+                }
+            }
+    
+        }
+    
+        .description{
+    
+            grid-column: 1 / spam 2;
+          
+                .datos_decription{
+    
+                display: flex;
+                height: 100%;
+                flex-direction: column;
+              
+                .name{
+                    margin: 5px;
+                   font-weight: bold;
+     
+            
+                }
+                .carrer{
+                   
+                   margin: 5px;
+                
+                }
+            }
+        }
+    
+    
+    
+    }
+
+
+
+    .contenedor{
+        grid-gap: 3px;
+    
+
+      
+    }
+  
+}
+    
